@@ -1,0 +1,15 @@
+# WordPress/React Plugin Ignore
+node_modules/
+build/
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Plugin Specific
+docs/superpowers/context/
+wpm-exports/
+temp-import/
+*.zip
