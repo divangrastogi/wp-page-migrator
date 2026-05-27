@@ -1,0 +1,57 @@
+/* src/styles/_uploader.scss */
+.wpm-file-uploader {
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.wpm-file-dropzone {
+	border: 2px dashed var(--wpm-border);
+	border-radius: 12px;
+	padding: 64px 24px;
+	text-align: center;
+	background: #fcfdfe;
+	transition: all 0.2s ease;
+	cursor: pointer;
+
+	&:hover,
+	&.is-dragging {
+		border-color: var(--wpm-primary);
+		background: #f5f7ff;
+		border-style: solid;
+
+		.wpm-upload-icon {
+			color: var(--wpm-primary);
+			transform: translateY(-4px);
+		}
+	}
+
+	&.is-uploading {
+		cursor: default;
+		background: #fff;
+		border-color: var(--wpm-border);
+	}
+
+	.wpm-upload-icon {
+		margin-bottom: 20px;
+		color: var(--wpm-text-muted);
+		transition: all 0.2s ease;
+
+		svg {
+			width: 64px;
+			height: 64px;
+		}
+	}
+
+	h4 {
+		margin: 0 0 12px 0;
+		font-size: 18px;
+		font-weight: 600;
+		color: var(--wpm-text-main);
+	}
+
+	p {
+		margin: 0;
+		font-size: 14px;
+		color: var(--wpm-text-muted);
+	}
+}

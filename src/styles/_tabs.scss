@@ -1,0 +1,44 @@
+/* src/styles/_tabs.scss */
+.wpm-admin-wrap {
+	.components-tab-panel__tabs {
+		background: #e2e8f0;
+		padding: 4px;
+		border-radius: 10px;
+		display: flex;
+		width: fit-content;
+		margin: 0 auto 30px;
+		border: none;
+
+		.components-button {
+			border-radius: 8px;
+			padding: 8px 24px;
+			font-weight: 600;
+			font-size: 14px;
+			color: #64748b;
+			transition: all 0.2s ease;
+			border: none;
+			background: transparent;
+			height: auto;
+
+			&:hover {
+				color: #1e293b;
+				background: rgba(255, 255, 255, 0.5);
+			}
+
+			&.is-active {
+				background: #fff;
+				color: #0f172a;
+				box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+				&::after {
+					display: none;
+				}
+			}
+
+			&:focus {
+				box-shadow: none !important;
+				outline: none !important;
+			}
+		}
+	}
+}

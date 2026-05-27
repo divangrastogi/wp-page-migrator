@@ -1,0 +1,19 @@
+/* src/styles/_responsive.scss */
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+	.wpm-admin-wrap {
+		margin: 15px;
+	}
+
+	.wpm-card-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 15px;
+
+		.wpm-search-container {
+			width: 100%;
+		}
+	}
+}

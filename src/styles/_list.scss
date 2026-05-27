@@ -1,0 +1,163 @@
+/* src/styles/_list.scss */
+
+// Search Wrapper Polish
+.wpm-search-wrapper {
+	position: relative;
+	width: 300px;
+
+	.wpm-search-icon {
+		position: absolute;
+		left: 12px;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 10;
+		color: var(--wpm-text-muted);
+		pointer-events: none;
+		display: flex;
+		align-items: center;
+	}
+
+	.components-search-control {
+		.components-base-control__field {
+			margin-bottom: 0;
+		}
+
+		.components-search-control__input {
+			padding-left: 36px !important;
+			border-radius: 8px !important;
+			border: 1px solid var(--wpm-border) !important;
+			transition: all 0.2s ease;
+			height: 40px;
+			font-size: 14px;
+			background-color: #fff !important;
+
+			&:focus {
+				border-color: var(--wpm-primary) !important;
+				box-shadow: 0 0 0 1px var(--wpm-primary) !important;
+				outline: none !important;
+			}
+		}
+
+		.components-search-control__icon {
+			display: none !important;
+		}
+	}
+}
+
+// Custom Checkbox
+.wpm-item-checkbox input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+	border-radius: 4px;
+	border: 2px solid var(--wpm-border);
+	appearance: none;
+	-webkit-appearance: none;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.2s ease;
+	background-color: #fff;
+	margin: 0;
+	display: block;
+
+	&:checked {
+		background-color: var(--wpm-primary);
+		border-color: var(--wpm-primary);
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 5px;
+			top: 1px;
+			width: 4px;
+			height: 8px;
+			border: solid white;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg);
+		}
+	}
+
+	&:hover:not(:checked) {
+		border-color: var(--wpm-primary);
+	}
+}
+
+.wpm-list-header {
+	display: flex;
+	align-items: center;
+	padding: 12px 20px;
+	background: var(--wpm-background);
+	border-bottom: 1px solid var(--wpm-border);
+	font-weight: 600;
+	font-size: 13px;
+	color: var(--wpm-text-muted);
+}
+
+.wpm-col-check {
+	width: 40px;
+	flex-shrink: 0;
+}
+
+.wpm-col-title {
+	flex: 1;
+	min-width: 0;
+	padding-right: 20px;
+}
+
+.wpm-col-status {
+	width: 120px;
+	flex-shrink: 0;
+}
+
+.wpm-col-date {
+	width: 140px;
+	flex-shrink: 0;
+	text-align: right;
+}
+
+.wpm-list-item {
+	display: flex;
+	align-items: center;
+	padding: 14px 20px;
+	border-bottom: 1px solid var(--wpm-border);
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	cursor: pointer;
+
+	&:hover {
+		background-color: #f8fafc;
+		transform: translateX(4px);
+	}
+
+	&.is-selected {
+		background-color: #f0f7ff;
+		box-shadow: inset 3px 0 0 var(--wpm-primary);
+	}
+
+	.wpm-item-title {
+		font-weight: 500;
+		color: var(--wpm-text-main);
+		font-size: 14px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.wpm-item-date {
+		font-size: 13px;
+		color: var(--wpm-text-muted);
+		text-align: right;
+	}
+
+	.wpm-badge {
+		padding: 4px 10px;
+		border-radius: 12px;
+		font-size: 11px;
+		font-weight: 600;
+		background: #f1f5f9;
+		color: var(--wpm-text-muted);
+
+		&.is-published {
+			background: var(--wpm-success-bg);
+			color: var(--wpm-success-text);
+		}
+	}
+}

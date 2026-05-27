@@ -1,0 +1,72 @@
+/* src/styles/_stepper.scss */
+.wpm-stepper {
+	display: flex;
+	justify-content: space-between;
+	max-width: 500px;
+	margin: 0 auto 40px auto;
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 15px;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: var(--wpm-border);
+		z-index: 1;
+	}
+}
+
+.wpm-step {
+	z-index: 2;
+	background: transparent;
+	padding: 0 10px;
+	text-align: center;
+
+	.wpm-step-circle {
+		width: 32px;
+		height: 32px;
+		background: #f1f5f9;
+		color: var(--wpm-text-muted);
+		border: 2px solid var(--wpm-border);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 5px;
+		font-weight: 700;
+		transition: all 0.3s ease;
+		box-shadow: 0 0 0 4px #f1f5f9;
+	}
+
+	.wpm-step-label {
+		font-size: 12px;
+		color: var(--wpm-text-muted);
+		font-weight: 500;
+	}
+
+	&.is-active {
+
+		.wpm-step-circle {
+			background: var(--wpm-primary);
+			color: var(--wpm-surface);
+			border-color: var(--wpm-primary);
+			box-shadow: 0 0 0 4px #e0e7ff;
+		}
+
+		.wpm-step-label {
+			color: var(--wpm-text-main);
+			font-weight: 600;
+		}
+	}
+
+	&.is-completed {
+
+		.wpm-step-circle {
+			background: var(--wpm-success-bg);
+			color: var(--wpm-success-text);
+			border-color: var(--wpm-success-bg);
+		}
+	}
+}

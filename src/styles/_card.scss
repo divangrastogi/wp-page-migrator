@@ -1,0 +1,38 @@
+/* src/styles/_card.scss */
+.wpm-card {
+	background: var(--wpm-surface);
+	border-radius: 12px;
+	border: 1px solid var(--wpm-border);
+	box-shadow:
+		0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
+}
+
+.wpm-card-header {
+	padding: 20px;
+	border-bottom: 1px solid #f1f5f9;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	h3 {
+		margin: 0 0 4px 0;
+		font-size: 18px;
+		color: var(--wpm-text-main);
+	}
+
+	p {
+		margin: 0;
+		font-size: 14px;
+		color: var(--wpm-text-muted);
+	}
+}
+
+.wpm-card-footer {
+	padding: 20px;
+	background: var(--wpm-background);
+	border-top: 1px solid var(--wpm-border);
+	display: flex;
+	justify-content: flex-end;
+}

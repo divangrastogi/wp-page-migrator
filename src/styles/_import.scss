@@ -1,0 +1,109 @@
+/* src/styles/_import.scss */
+.wpm-import-config,
+.wpm-import-progress,
+.wpm-import-notice-wrap {
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.wpm-import-notice-wrap {
+	margin-top: 24px;
+}
+
+// Config Section
+.wpm-config-section {
+	margin-bottom: 32px;
+	padding: 24px;
+	background: #f8fafc;
+	border-radius: 12px;
+	border: 1px solid var(--wpm-border);
+
+	.wpm-config-label {
+		font-weight: 600;
+		font-size: 15px;
+		display: block;
+		margin-bottom: 8px;
+		color: var(--wpm-text-main);
+	}
+
+	.wpm-section-title {
+		margin: 0 0 16px 0;
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--wpm-text-muted);
+	}
+}
+
+.wpm-start-button {
+	width: 100%;
+	justify-content: center;
+	height: 48px !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
+	border-radius: 8px !important;
+}
+
+// Progress Section
+.wpm-progress-header {
+	margin-bottom: 32px;
+
+	.wpm-progress-status {
+		font-size: 16px;
+		font-weight: 600;
+		color: var(--wpm-text-main);
+	}
+
+	.wpm-progress-percentage {
+		font-size: 16px;
+		font-weight: 700;
+		color: var(--wpm-primary);
+	}
+
+	.wpm-progress-bar-wrap {
+		margin-top: 16px;
+
+		.components-progress-bar {
+			height: 8px;
+			border-radius: 4px;
+		}
+	}
+}
+
+.wpm-log-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 12px;
+
+	.wpm-log-label {
+		font-size: 12px;
+		font-weight: 600;
+		color: var(--wpm-text-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.wpm-log-divider {
+		flex: 1;
+		height: 1px;
+		background: var(--wpm-border);
+	}
+}
+
+// Notices in Config
+.wpm-config-notice {
+	margin-bottom: 24px;
+
+	.wpm-notice-title {
+		font-weight: 600;
+		margin-bottom: 8px;
+	}
+
+	.wpm-notice-list {
+		margin: 0;
+		padding-left: 20px;
+		font-size: 14px;
+	}
+}
